@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercise 1d</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost/c273/C273_L08Ajax/getNutrition.php",
+                    cache: false,
+                    dataType: "JSON",
+                    success: function (response) {
+                        var message = "";
+                        for (i = 0; i < response.length; i++) {
+                            message += "<h3>" + response[i].food + "</h3>";
+                            message += "<div>";
+                            message += "<label>Calories</label><p>" + response[i].calories + "</p>";
+                            message += "<label>Fat</label><p>" + response[i].fat + "</p>";
+                            message += "<label>Protein</label><p>" + response[i].protein + "</p>";
+                            message += "<label>Carbs</label><p>" + response[i].carbs + "</p>";
+                            message += "<label>Fiber</label><p>" + response[i].fiber + "</p>";
+                            message += "</div>";
+                        }
+                        $("#accordion").html(message);
+                        $("#accordion").accordion();
+                    },
+                    error: function (obj, textStatus, errorThrown) {
+                        console.log("Error " + textStatus + ": " + errorThrown);
+                    }
+                
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="accordion">
+        </div>
+    </body>
+</html>

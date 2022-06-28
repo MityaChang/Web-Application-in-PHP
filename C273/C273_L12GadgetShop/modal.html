@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap 4 Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#btnShow").click(function () {
+
+                    $("#item_modal").modal('show');
+                });
+
+                $("body").on("click", ".hide", function () {
+                    console.log("show message in console");
+                    //$("#item_modal").modal('hide');
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <h2>This is a heading</h2>
+
+
+        <button id="btnShow">Click me to show modal</button>
+        <button id="btnHide" class="hide">Click me to show message</button>
+
+        <!-- Bootstrap modal -->
+        <div class="modal fade" id="item_modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Item Details</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label>Item Quantity</label>
+                                <input name="itemqty" class="form-control" type="number" value="1" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div><!-- /.modal-body -->
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- End Bootstrap modal -->
+
+    </body>
+</html>

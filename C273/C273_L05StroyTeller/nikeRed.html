@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap 4 Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#myInput").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $(".dropdown-menu a").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+                $(".card").css("margin", "20px");
+                $("#dropdownMenuButton").css("font-size", "27px");
+                $(".dropdown").css("margin", "20px");
+            });
+        </script>
+        <style>
+            .card{
+                padding: 16px;
+                text-align: center;
+                border-color: #bee5eb;
+                height:450px;
+            }
+            .column {
+                float: left;
+                width: 25%;
+                padding: 0 10px;
+            }
+
+            /* Remove extra left and right margins, due to padding */
+            .row {margin: 0 -5px;}
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+            .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+
+            .dropdown>.dropdown-toggle:active {
+                /*Without this, clicking will make it sticky*/
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <a class="navbar-brand" href="http://localhost/c273/P05/main_page.html"><img src="img/logo3.png" alt="Responsive image" class="img-fluid" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    New Arrivals
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                    <a class="dropdown-item" href="#">Men</a>
+                    <a class="dropdown-item" href="#">Women</a>
+                    <a class="dropdown-item" href="#">Kids</a>
+                    <a class="dropdown-item" href="#">Collections</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Women
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Featured</a>
+                    <a class="dropdown-item" href="#">Shoes</a>
+                    <a class="dropdown-item" href="#">Clothes</a>
+                    <a class="dropdown-item" href="#">Accessories</a>
+                    <a class="dropdown-item" href="#">Collections</a>
+                    <a class="dropdown-item" href="#">Brands</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Men
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Featured</a>
+                    <a class="dropdown-item" href="#">Shoes</a>
+                    <a class="dropdown-item" href="#">Clothes</a>
+                    <a class="dropdown-item" href="#">Accessories</a>
+                    <a class="dropdown-item" href="#">Collections</a>
+                    <a class="dropdown-item" href="#">Brands</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Kids
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Babies</a>
+                    <a class="dropdown-item" href="#">Children</a>
+                    <a class="dropdown-item" href="#">Teens</a>
+                    <a class="dropdown-item" href="#">Collections</a>
+                    <a class="dropdown-item" href="#">Brands</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Brands
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                    <a class="dropdown-item" href="#">Adidas</a>
+                    <a class="dropdown-item" href="#">Nike</a>
+                    <a class="dropdown-item" href="#">Puma</a>
+                    <a class="dropdown-item" href="#">Kappa</a>
+                    <a class="dropdown-item" href="#">Converse</a>
+                    <a class="dropdown-item" href="#">New Balance</a>
+                    <a class="dropdown-item" href="#">Reebook</a>
+                    <a class="dropdown-item" href="#">Vans</a>
+                    <a class="dropdown-item" href="#">Jordan</a>
+                </div>
+            </div>
+            <form class="form-inline d-flex justify-content-center md-form form-sm ml-auto">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                       aria-label="Search">
+            </form>
+            <form name="login" action="loginPage.html" method="post">
+                <input type="submit" value="Login" class="btn btn-info" />
+
+            </form>
+        </nav>
+        <div class="row">
+            <div class="column">
+                <div class="card" style="width:250px;">
+                    <img class="card-img-bottom" src="img/red1.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan5 Retro</h4>
+                        <p class="card-text">Some shoes intro</p>
+                        <div class="text-center">
+                            <a class="btn btn-warning">View Sizes available</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="width:250px">
+                    <img class="card-img-bottom" src="img/red2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan westbrook</h4>
+                        <p class="card-text">Some shoes intro</p>
+                        <a href="#" class="btn btn-warning">View Sizes available</a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="width:250px">
+                    <img class="card-img-bottom" src="img/red1.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan5 Retro</h4>
+                        <p class="card-text">Some shoes intro</p>
+                        <a href="#" class="btn btn-warning">View Sizes available</a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="width:250px">
+                    <img class="card-img-bottom" src="img/red2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan westbrook</h4>
+                        <p class="card-text">Some shoes intro</p>
+                        <a href="#" class="btn btn-warning">View Sizes available</a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="width:250px">
+                    <img class="card-img-bottom" src="img/red1.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan5 Retro</h4>
+                        <p class="card-text">Some shoes intro</p>
+                        <a href="#" class="btn btn-warning">View Sizes available</a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="width:250px ">
+                    <img class="card-img-bottom" src="img/red2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Jordan westbrook</h4>
+                        <p class="card-text">Some shoes intro</p>
+                        <a href="#" class="btn btn-warning">View Sizes available</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

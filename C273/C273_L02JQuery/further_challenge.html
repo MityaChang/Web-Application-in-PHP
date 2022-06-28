@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#btn1").click(function () {
+                    $("div:eq(0)").css('background-color', '#f06775');
+                    $("div:eq(1)").css('background-color', 'white');
+                    $("div:eq(2)").css('background-color', 'white');
+
+                });
+
+                $("#btn2").click(function () {
+                    $("div:eq(1)").css('background-color', '#6cf08b');
+                    $("div:eq(0)").css('background-color', 'white');
+                    $("div:eq(2)").css('background-color', 'white');
+                });
+
+
+                $("#btn3").click(function () {
+                    $("div:eq(2)").css('background-color', '#6cc8f0');
+                    $("div:eq(0)").css('background-color', 'white');
+                    $("div:eq(1)").css('background-color', 'white');
+                });
+            });
+        </script>
+        <style>
+            body{
+                text-align: center;
+            }
+            .myclass{
+                font-weight:bold;
+                color:blue
+            }
+            #btn1 , #btn2 , #btn3 {
+                border: none;
+                border-radius: 70%;
+                    color : white;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            #btn1 {background-color: #f06775;} 
+            #btn2  {background-color: #07fc03;} 
+            #btn3 {background-color: #6cc8f0;} 
+        </style>
+    </head>
+    <body>
+        <div class="red">This is red</div>
+        <div class="green">This is green</div>
+        <div class="blue">This is blue</div>
+        <div>
+            <button id="btn1">Red</button>
+            <button id="btn2">Green</button>
+            <button id="btn3">Blue</button>
+        </div>
+
+
+    </body>
+</html>
