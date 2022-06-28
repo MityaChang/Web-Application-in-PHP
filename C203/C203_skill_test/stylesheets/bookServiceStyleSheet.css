@@ -1,0 +1,106 @@
+.box-table
+{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    margin: 45px 0px 0px 0px;
+    width: 480px;
+    text-align: left;
+    border-collapse: collapse;
+}
+.box-table th
+{
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+}
+.box-table td
+{
+    padding: 8px;
+    background: #e8edff; 
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+}
+
+.inv{
+    border-radius: 50px;
+    background-color: cyan;
+}
+
+input[type=text],input[type=password], [type=Date],select,textarea {
+    width: 20%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #ff7b00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #ffb269;
+}
+
+label {
+    font-weight:bold;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+    margin-top: -25px;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bold;
+    font-weight: 100;
+    text-decoration: underline;
+}
+body{
+    text-align: center;
+}
+.button{
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    padding: 13px 28px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+    text-transform: uppercase;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+}
+#head li{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration:none;
+}
+#head {
+    text-align: center;
+    width:50%;
+    margin-left: 25%;
+    padding-left: 0;
+    overflow: hidden;
+    background-image: linear-gradient(red, yellow);
+}

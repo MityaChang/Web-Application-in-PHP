@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>div Challenge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                text-align: center;
+                padding-left: 600px;
+
+
+            }
+            .simple{
+                width:350px;
+
+                border: 1px solid gray;
+                background-color: lightgrey;
+                padding: 10px;
+            }
+            #id_Address,#id_initial,#id_last,#id_zip{
+                width: 80px;
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="simple">
+            <label for="id_MR">Title:</label>
+            <select id="id_MR" name="type">
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Mdm.">Mdm.</option>
+            </select><br/><br>
+            <label for="id_initial">First Name:</label>
+            <input name="First Name" type="text" id="id_initial"/></br><br>
+            <label for="id_last" >Last Name:</label>
+            <input name="Last Name" type="text" id="id_last"/><br/><br>
+
+            <label for="id_Address">Address:</label>
+            <textarea name="Address" id="id_Address" rows="2" cols="15"></textarea><br><br>
+
+            <label for="id_City">City:</label>
+            <select id="id_City" name="type">
+                <option value="New York">New York</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Boston">Boston</option>
+                <option value="Austin">Austin</option>
+            </select><br/><br>
+            <label for="id_zip">Zip code:</label>
+            <input name="Last Name" type="password" id="id_zip"/><br/>
+            <br><br>
+            <div align="left">
+                <input type="submit" class="button" value="Send Data" id="btnSubmit">
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
